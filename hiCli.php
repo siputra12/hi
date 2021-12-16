@@ -1,4 +1,5 @@
 <?php
+## Coded By : Tra
 $passDefault = "Asdqwe123";
 $defaultFile = "listNomor.txt";
 echo "1. Ekstrak Nomor\n2. Jalankan Bot (Harus Sudah Ekstrak Nomor)\n?Pilih Menu	:	";
