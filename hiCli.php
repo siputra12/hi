@@ -23,9 +23,10 @@ if(trim(fgets(STDIN)) == 1){
 	echo "**Nomor Disimpan Di File $defaultFile\n";
 }else{
 	$listNomor = @explode("\n", file_get_contents($defaultFile));
+	$bNmr = str_replace(array("+","."), "", $listNomor[0]);
 	$count = count($listNomor);
 	if(execute("cekServer") == "sibuk") exit("\nSorry Brow Sistem Sibuk!!!\n");
-	echo "***********************\nBase Nomor	:	{$listNomor[0]}\nJmlh Ekstrak	:	$count\n***********************\nLanjut(y/n)	:	";
+	echo "***********************\nBase Nomor	:	$bNmr\nJmlh Ekstrak	:	$count\n***********************\nLanjut(y/n)	:	";
 	if(trim(fgets(STDIN)) == "y"){
 		echo "?Input Ref	:	";
 		$ref = trim(fgets(STDIN));
